@@ -1,14 +1,17 @@
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}"
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
       colors: {
-        lavender: '#e8ddff',
-        paleBeige: '#f9f4ef',
-        softBlue: '#cfd8f9',
+        brand: {
+          light: '#f9f4ef',
+          primary: '#e8ddff',
+          accent: '#37306B',
+          muted: '#4a4a4a',
+        },
       },
       fontFamily: {
         serif: ['DM Serif Display', 'serif'],
