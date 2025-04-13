@@ -8,17 +8,27 @@ function MyApp({ Component, pageProps }: AppProps) {
   const [theme, setTheme] = useState('sand');
 
   useEffect(() => {
-    document.documentElement.className = '';
-    document.documentElement.classList.add(`theme-${theme}`);
+    const html = document.documentElement;
+    html.classList.remove('theme-sand', 'theme-desert', 'theme-deepTech', 'theme-charcoal', 'theme-white');
+    html.classList.add(`theme-${theme}`);
   }, [theme]);
 
+  useEffect(() => {
+    if (!document.documentElement.className.includes('theme-')) {
+      document.documentElement.classList.add('theme-sand');
+    }
+  }, []);
+
   return (
-    <div className="min-h-screen" style={{
-      background: 'linear-gradient(to bottom right, var(--tw-brand-light), var(--tw-brand-primary))',
-      color: 'var(--tw-brand-muted)'
-    }}>
+    <div
+      className="flex flex-col min-h-screen"
+      style={{
+        background: 'linear-gradient(to bottom right, var(--tw-brand-light), var(--tw-brand-primary))',
+        color: 'var(--tw-brand-muted)',
+      }}
+    >
       <Navbar onThemeChange={setTheme} />
-      <main className="pt-20 px-4 md:px-8">
+      <main className="flex-grow pt-20 px-4 md:px-8">
         <Component {...pageProps} />
       </main>
       <Footer />
