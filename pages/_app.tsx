@@ -1,11 +1,12 @@
-import "../styles/globals.css";
-import type { AppProps } from "next/app";
-import Layout from "../components/Layout";
+import '../styles/globals.css';
+import type { AppProps } from 'next/app';
 
-export default function App({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
+    <div className="bg-gradient-to-br from-[#f9f4ef] via-[#e8ddff] to-[#cfd8f9] text-neutral-900 min-h-screen">
       <Component {...pageProps} />
-    </Layout>
+    </div>
   );
 }
+
+export default MyApp;
