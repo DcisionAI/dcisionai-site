@@ -1,4 +1,3 @@
-const themeVariants = require('tailwindcss-theme-variants').default;
 
 module.exports = {
   content: [
