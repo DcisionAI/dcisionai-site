@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import JourneyMap from '../components/JourneyMap';
 
 export default function VisionPage() {
   useEffect(() => {
@@ -56,6 +57,8 @@ export default function VisionPage() {
           </p>
         </div>
       </div>
+
+      <JourneyMap />
     </section>
   );
 }
