@@ -7,10 +7,10 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          light: '#f9f4ef',
-          primary: '#e8ddff',
-          accent: '#37306B',
-          muted: '#4a4a4a',
+          light: '#fdf6f0',     // light sand
+          primary: '#f2e6da',   // warm beige
+          accent: '#5b4a42',    // header/nav
+          muted: '#7e6f68',     // body text
         },
       },
       fontFamily: {
