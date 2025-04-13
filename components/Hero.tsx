@@ -4,13 +4,15 @@ export default function Hero() {
   return (
     <div className="relative h-screen overflow-hidden">
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover pointer-events-none select-none"
         src="/videos/chess.mp4"
         autoPlay
         loop
         muted
         playsInline
-      />
+        controls={false}
+        />
+
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50 flex items-center justify-center">
         <div className="text-center text-white px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
