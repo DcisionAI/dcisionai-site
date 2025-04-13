@@ -1,14 +1,12 @@
-import React from "react";
-
-export default function Investors() {
+export default function InvestorsPage() {
   return (
-    <div className="animate-fade-in">
-      <div className="max-w-3xl mx-auto p-6">
-        <h1 className="text-3xl font-bold mb-4">Investor Overview</h1>
-        <p className="text-neutral-600 text-lg">
-          DcisionAI is building the intelligent decision layer for the enterprise. Our agentic optimization platform targets $2M ARR across 3 verticals within 18 months, with early traction and deep-tech differentiation.
-        </p>
-      </div>
-    </div>
+    <section className="min-h-screen flex flex-col items-center justify-center text-center px-6 py-20">
+      <h1 className="text-4xl md:text-6xl font-serif font-semibold text-neutral-900">
+        Backing the Future of Enterprise Intelligence
+      </h1>
+      <p className="mt-6 max-w-xl text-lg text-neutral-700">
+        We’re building a category-defining company at the intersection of AI, optimization, and enterprise ops.
+      </p>
+    </section>
   );
 }
