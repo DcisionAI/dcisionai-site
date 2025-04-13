@@ -1,3 +1,5 @@
+const themeVariants = require('tailwindcss-theme-variants').default;
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -7,16 +9,15 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          light: '#fdf6f0',     // light sand
-          primary: '#f2e6da',   // warm beige
-          accent: '#5b4a42',    // header/nav
-          muted: '#7e6f68',     // body text
+          light: 'var(--tw-brand-light)',
+          primary: 'var(--tw-brand-primary)',
+          accent: 'var(--tw-brand-accent)',
+          muted: 'var(--tw-brand-muted)',
         },
       },
       fontFamily: {
         serif: ['DM Serif Display', 'serif'],
       },
     },
-  },
-  plugins: [],
+  }
 };

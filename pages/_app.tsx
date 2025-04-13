@@ -13,7 +13,10 @@ function MyApp({ Component, pageProps }: AppProps) {
   }, [theme]);
 
   return (
-    <div className="bg-gradient-to-br from-brand-light via-brand-primary to-brand-light text-brand-muted min-h-screen">
+    <div className="min-h-screen" style={{
+      background: 'linear-gradient(to bottom right, var(--tw-brand-light), var(--tw-brand-primary))',
+      color: 'var(--tw-brand-muted)'
+    }}>
       <Navbar onThemeChange={setTheme} />
       <main className="pt-20 px-4 md:px-8">
         <Component {...pageProps} />
