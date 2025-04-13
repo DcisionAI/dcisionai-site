@@ -1,3 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html.theme-sand {
+  --tw-brand-light: #fdf6f0;
+  --tw-brand-primary: #f2e6da;
+  --tw-brand-accent: #5b4a42;
+  --tw-brand-muted: #7e6f68;
+}
+
+html.theme-desert {
+  --tw-brand-light: #fcf8f3;
+  --tw-brand-primary: #e8dcc1;
+  --tw-brand-accent: #7c5e3c;
+  --tw-brand-muted: #8b735a;
+}
+
+html.theme-deepTech {
+  --tw-brand-light: #0f172a;
+  --tw-brand-primary: #1e293b;
+  --tw-brand-accent: #60a5fa;
+  --tw-brand-muted: #cbd5e1;
+}
+
+html.theme-charcoal {
+  --tw-brand-light: #1f1f1f;
+  --tw-brand-primary: #2c2c2c;
+  --tw-brand-accent: #e0e0e0;
+  --tw-brand-muted: #b0b0b0;
+}
+
+html.theme-white {
+  --tw-brand-light: #ffffff;
+  --tw-brand-primary: #f1f1f1;
+  --tw-brand-accent: #0f0f0f;
+  --tw-brand-muted: #4a4a4a;
+}
