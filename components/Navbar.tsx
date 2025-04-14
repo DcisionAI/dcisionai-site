@@ -16,7 +16,7 @@ export default function Navbar({ onThemeChange }: Props) {
           <li><a href="/use-cases" className="hover:text-[var(--tw-brand-accent)]/80">Use Cases</a></li>
           <li><a href="/architecture" className="hover:text-[var(--tw-brand-accent)]/80">Architecture</a></li>
           <li><a href="/investors" className="hover:text-[var(--tw-brand-accent)]/80">Investors</a></li>
-          <li>
+          {/**<li>
             <select
               className="ml-2 text-sm bg-[var(--tw-brand-light)] border border-[var(--tw-brand-muted)] text-[var(--tw-brand-accent)] rounded px-2 py-1"
               onChange={(e) => onThemeChange?.(e.target.value)}
@@ -27,6 +27,7 @@ export default function Navbar({ onThemeChange }: Props) {
               ))}
             </select>
           </li>
+          **/}
         </ul>
       </div>
     </nav>
