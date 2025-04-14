@@ -40,7 +40,7 @@ const FAQ = () => {
     <section id="faq" className="max-w-5xl mx-auto px-6 py-20 bg-transparent">
       {/* OpenAI Chat Box */}
       <form onSubmit={handleSubmit} className="mb-16 border border-[#e9e4dc] bg-[#f9f5ef] p-6 rounded-2xl shadow-sm">
-        <label htmlFor="chat-question" className="block text-[#1a1a1a] text-sm font-medium mb-3">Ask ChatGPT about DcisionAI</label>
+        <label htmlFor="chat-question" className="block text-[#1a1a1a] text-sm font-medium mb-3">Ask about DcisionAI</label>
         <div className="flex flex-col sm:flex-row gap-3">
           <input
             id="chat-question"
