@@ -8,7 +8,9 @@ export default function Navbar({ onThemeChange }: Props) {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-[var(--tw-brand-light)]/80 backdrop-blur-md shadow-sm border-b border-[var(--tw-brand-primary)]/50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-        <h1 className="text-xl font-serif font-semibold text-[var(--tw-brand-accent)]">DcisionAI</h1>
+        <h1 className="text-xl font-serif font-semibold text-[var(--tw-brand-accent)]">
+          <a href="/" className="hover:text-[var(--tw-brand-accent)]/80">DcisionAI</a>
+        </h1>
         <ul className="flex gap-6 text-sm text-[var(--tw-brand-accent)] items-center">
           <li><a href="/vision" className="hover:text-[var(--tw-brand-accent)]/80">Vision</a></li>
           <li><a href="/use-cases" className="hover:text-[var(--tw-brand-accent)]/80">Use Cases</a></li>
