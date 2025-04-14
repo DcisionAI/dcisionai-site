@@ -3,36 +3,11 @@ import * as Accordion from "@radix-ui/react-accordion";
 
 const FAQ = () => {
   const [chatInput, setChatInput] = useState("");
-  const [chatResponse, setChatResponse] = useState("");
-  const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (chatInput.trim()) {
-      setLoading(true);
-    fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `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`
-      },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [
-          { role: "system", content: "You are a helpful assistant that only answers questions about DcisionAI." },
-          { role: "user", content: chatInput }
-        ]
-      })
-    })
-      .then(res => res.json())
-      .then(data => {
-        setChatResponse(data.choices?.[0]?.message?.content || "No response");
-        setLoading(false);
-      })
-      .catch(err => {
-        setChatResponse("An error occurred while fetching response.");
-        setLoading(false);
-      });
+      window.open(`https://chat.openai.com/?q=${encodeURIComponent('Answer ONLY questions about DcisionAI. ' + chatInput)}`, "_blank");
     }
   };
 
@@ -40,7 +15,7 @@ const FAQ = () => {
     <section id="faq" className="max-w-5xl mx-auto px-6 py-20 bg-transparent">
       {/* OpenAI Chat Box */}
       <form onSubmit={handleSubmit} className="mb-16 border border-[#e9e4dc] bg-[#f9f5ef] p-6 rounded-2xl shadow-sm">
-        <label htmlFor="chat-question" className="block text-[#1a1a1a] text-sm font-medium mb-3">Ask ChatGPT about DcisionAI</label>
+        <label htmlFor="chat-question" className="block text-[#1a1a1a] text-sm font-medium mb-3">Ask about DcisionAI</label>
         <div className="flex flex-col sm:flex-row gap-3">
           <input
             id="chat-question"
@@ -58,13 +33,6 @@ const FAQ = () => {
           </button>
         </div>
       </form>
-
-      {loading && <p className="text-sm text-neutral-500 mt-4">Loading response...</p>}
-      {chatResponse && (
-        <div className="mt-6 p-4 bg-[#fcfaf7] border border-[#e9e4dc] rounded-lg text-sm text-[#1a1a1a] whitespace-pre-line">
-          {chatResponse}
-        </div>
-      )}
 
       <h2 className="text-[36px] leading-tight font-semibold tracking-[-0.015em] mb-12 text-black">Frequently Asked Questions</h2>
       <Accordion.Root type="single" collapsible className="space-y-6">
