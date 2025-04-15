@@ -20,7 +20,7 @@ export default function Hero() {
       {/* Overlay Content */}
       <div className="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-start pt-16 text-center px-4 bg-black bg-opacity-40 text-white overflow-y-auto">
         <h1 className="text-4xl md:text-5xl font-sans font-semibold mb-4 max-w-3xl">
-          Automate Complex Decisions with AI-Driven Agents
+        Automate Complex Decisions with Agentic AI
         </h1>
         <p className="text-lg md:text-xl mb-6 max-w-2xl text-zinc-200">
           DcisionAI plugs into your enterprise systems and orchestrates pricing, planning, inventory, and routing — using optimization, agentic AI, and explainable protocols.
