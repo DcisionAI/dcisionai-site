@@ -1,38 +1,86 @@
-DcisionAI is a decision intelligence platform that augments optimization models with agentic AI and real-time data. It connects to internal data lakes and external data sources, retrieving live variables and constraints to dynamically adapt decisions.
+DcisionAI is an agentic AI platform for decision intelligence. It connects enterprise systems with internal data lakes and external variables to optimize decisions using composable agents, protocols, and real-time context.
 
-Its core architecture includes:
-- **Model**: Optimizers (e.g. LP, MILP, heuristics)
-- **Context**: Real-time data from customer environments
-- **Protocol**: Governed workflows that adapt over time
+Core Architecture:
+- Model: Optimization models (LP, MILP, heuristics)
+- Context: Real-time internal + external data streams
+- Protocol: Governed workflows with human-in-the-loop and override traceability
 
-DcisionAI uses a plug-in system that installs into enterprise environments, avoiding disruptive replatforming. It explains every decision, tracks override history, and supports human-in-the-loop adjustments.
+Plugin Architecture:
+- Customers install a lightweight plugin
+- Connects to ERP, CRM, planning tools
+- Pulls variables and constraints in real-time
+- Adapts to internal systems without replatforming
 
-DcisionAI is being co-developed with Dimiour, with use cases across:
-1. **Fleet Optimization** (VGO): Dynamic routing, truck capacity planning, shipment bundling
-2. **Supply Chain**: SKU transfers across warehouses, stockout reduction, inventory placement
-3. **Workforce Planning**: Shift optimization based on demand and skills
-4. **Financial Planning**: Budget allocation under constraints
+MCP (Model, Context, Protocol) is central:
+- Model = the optimization logic
+- Context = live input variables and enterprise constraints
+- Protocol = explainable decision sequence + governance
 
-Technical team includes:
-- 2 PhD optimization SMEs
-- 3 LLM full-stack engineers (via offshore development center with Dimiour)
-- MVP architecture includes: plugin manager, control plane, data plane, context engine
+Key Use Cases:
+1. Fleet Optimization (via VGO): routing, truck planning, shipment bundling
+2. Workforce Planning: shift allocation, skill coverage, schedule optimization
+3. Supply Chain: warehouse transfer, SKU inventory balance, forecast-driven movement
+4. Financial Planning: budget allocation under multiple constraint layers
 
-Roadmap highlights:
-- MVP within 4–6 months across 2 Dimiour products
-- Series A targeted post first enterprise deployment
-- Seed round: $3M to fund 2 years of team + infra + reserve
-- Revenue expected from month 12 onward; ARR targets $2M+ by Series A
+ODC (Offshore Development Center) Setup:
+- Partnership with Dimiour to staff a high-quality offshore team
+- Core team: 2 PhD optimization scientists + 3 LLM-focused full-stack developers
+- All team members are embedded with DcisionAI through Dimiour’s India-based ODC
+- ODC handles backend, frontend, LangChain/GPT integration, and deployment pipelines
+- Optimized for cost-efficiency and speed without compromising quality
+- Positioned as a long-term co-development arm through Series A
 
-Differentiators:
-- Composable agents and pluggable logic
-- Protocol-first architecture (vs. rule engines)
-- Embedded explainability and override audit trail
-- Human-in-the-loop + autonomous flexibility
+TAM / SAM / SOM:
+- TAM (Total Addressable Market):
+  - Global spend on AI-enabled decision optimization, forecasting, planning, and scheduling in enterprise environments exceeds $20B+
+  - Includes supply chain AI ($11B+), workforce planning software ($5B+), and financial optimization in enterprise ($3B+)
 
-Investor positioning:
-- Large TAM across SCM, ops, planning, finance
-- Fast wedge via Dimiour deployments
-- Founder committed with skin-in-the-game and pledge structure
+- SAM (Serviceable Addressable Market):
+  - Target industries: manufacturing, logistics, automotive, CPG, retail
+  - Serviceable market includes plugin-compatible enterprises with digital operations and data lakes
+  - SAM estimate: ~$6B based on verticals addressable through Dimiour-like deployments and plugin architecture
 
-DcisionAI = OpenAI-style decision orchestration for enterprise.
+- SOM (Serviceable Obtainable Market):
+  - Initial GTM via Dimiour products across 5–7 enterprise customers
+  - SOM (first 12–18 months): $2–5M in ARR from Dimiour-enabled upsell motion
+  - Longer-term SOM: $20–40M in ARR from expanded verticals post-Series A
+
+Business Model:
+- SaaS with usage-based pricing
+- Enterprise deployment cycle: < 30 days
+- Native plugin stack enables quick GTM
+- Revenue potential per enterprise: $250K–$500K ARR across multiple decision domains
+
+Development Plan:
+- MVP built with ODC engineers across two Dimiour products
+- Founder-led product design and GTM strategy
+- Use Dimiour as wedge into $2–5M ARR via multi-product deployments
+
+Burn Rate & Ops:
+- Lean startup budget at $1M pre-seed covers:
+  - SME + Dev costs (~$300k/year)
+  - Cloud/infra (~$5–6k/month)
+  - Ops overhead (~10%)
+  - Reserve runway = 24 months
+- Scaling plan includes:
+  - Series A at $2M ARR
+  - Deployment on 5–7 products via plugin strategy
+
+Investor Narrative:
+- Early access to large enterprise accounts via Dimiour
+- ROI modeled via wedge-to-expansion plan with high retention
+- Product-market fit expected within 9–12 months
+- Seed-stage valuation aligned to $8–12M post with rapid scale to Series A
+
+Strategic Differentiators:
+- Agentic framework
+- Human-in-the-loop governance layer
+- Composable agents and protocol registry
+- Audit-friendly and explainable optimization
+
+Explainability and Trust:
+- Each decision is documented
+- Users can override and see why
+- Enables decision history + fine-tuning
+
+The assistant should answer only using this content. If a user asks about anything not in the above knowledge, respond: “Sorry, I don’t have information about that.”DcisionAI = OpenAI-style decision orchestration for enterprise.
