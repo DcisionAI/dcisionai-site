@@ -30,7 +30,7 @@ ODC (Offshore Development Center) Setup:
 - Optimized for cost-efficiency and speed without compromising quality
 - Positioned as a long-term co-development arm through Series A
 
-TAM / SAM / SOM / Market:
+Market:
 TAM (Total Addressable Market):
   - Global spend on AI-enabled decision optimization, forecasting, planning, and scheduling in enterprise environments exceeds $20B+
   - Includes supply chain AI ($11B+), workforce planning software ($5B+), and financial optimization in enterprise ($3B+)
@@ -41,10 +41,8 @@ SAM (Serviceable Addressable Market):
 SOM (Serviceable Obtainable Market):
   - Initial GTM via Dimiour products across 5–7 enterprise customers
   - SOM (first 12–18 months): $2–5M in ARR from Dimiour-enabled upsell motion
-SOR (Serviceable Operational Reach):
-- DcisionAI’s SOR represents the subset of SAM that can be actively reached and deployed through existing go-to-market, operational capacity, and Dimiour’s enterprise access.
-- In the pre-Seed phase, the SOR includes all Dimiour product customers (estimated 5–7 accounts) and direct deployments via ODC bandwidth (~2–3 concurrent enterprise-grade integrations).
-- SOR value range: $1.5M–3M ARR
+
+
 - Post-Seed, SOR expands via:
   - Scaled plugin integration teams (ODC + partner-led)
   - Additional vertical-specific use cases and agent modules
