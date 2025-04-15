@@ -2,6 +2,13 @@ import React, { useState } from "react";
 
 const FAQ = () => {
   const [chatInput, setChatInput] = useState("");
+  const [chatHistory, setChatHistory] = useState([
+    {
+      role: "system",
+      content:
+        "You are a helpful assistant trained only on DcisionAI. Only answer based on the provided context.",
+    },
+  ]);
   const [chatResponse, setChatResponse] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -9,6 +16,10 @@ const FAQ = () => {
     e.preventDefault();
     if (!chatInput.trim()) return;
 
+    const newMessage = { role: "user", content: chatInput };
+    const updatedHistory = [...chatHistory, newMessage];
+    setChatHistory(updatedHistory);
+    setChatInput("");
     setChatResponse("");
     setLoading(true);
 
@@ -18,14 +29,7 @@ const FAQ = () => {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          messages: [
-            {
-              role: "user",
-              content: chatInput,
-            },
-          ],
-        }),
+        body: JSON.stringify({ messages: updatedHistory }),
       });
 
       const reader = res.body?.getReader();
@@ -50,6 +54,9 @@ const FAQ = () => {
           }
         }
       }
+
+      // Push assistant message to history
+      setChatHistory((prev) => [...prev, { role: "assistant", content: chatResponse }]);
     } catch (err) {
       console.error("Client error:", err);
       setChatResponse("An error occurred while contacting the assistant.");

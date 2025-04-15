@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") return res.status(405).end();
 
   const { messages } = req.body;
-  const question = messages?.[messages.length - 1]?.content || "";
+  const latestQuestion = messages?.[messages.length - 1]?.content || "";
 
   try {
     const persistPath = path.resolve("data/hnswlib");
@@ -35,17 +35,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       })
     );
 
-    const results = await vectorStore.similaritySearch(question, 4);
-
-    // If no relevant chunks found, return a graceful fallback
-    if (!results.length) {
-      res.setHeader("Content-Type", "text/event-stream");
-      res.setHeader("Cache-Control", "no-cache, no-transform");
-      res.setHeader("Connection", "keep-alive");
-      res.write(`data: Sorry, I don’t have information about that.\n\ndata: [DONE]\n\n`);
-      return res.end();
-    }
-
+    const results = await vectorStore.similaritySearch(latestQuestion, 4);
     const context = results.map((r) => r.pageContent).join("\n\n");
 
     // Stream headers
@@ -62,17 +52,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           content: `
 You are a helpful assistant trained on the DcisionAI knowledgebase.
 
-Use only the context provided below to answer. If the context does not cover the user's question, reply with:
+Only use the context provided below to answer the user's question. If the information is not found in context, respond with:
 "Sorry, I don’t have information about that."
 
 Context:
 ${context}
           `.trim(),
         },
-        {
-          role: "user",
-          content: question,
-        },
+        ...messages,
       ],
     });
 
