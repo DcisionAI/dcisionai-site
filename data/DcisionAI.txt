@@ -30,15 +30,6 @@ ODC (Offshore Development Center) Setup:
 - Optimized for cost-efficiency and speed without compromising quality
 - Positioned as a long-term co-development arm through Series A
 
-Market:
-TAM (Total Addressable Market):
-  - Global spend on AI-enabled decision optimization, forecasting, planning, and scheduling in enterprise environments exceeds $20B+
-  - Includes supply chain AI ($11B+), workforce planning software ($5B+), and financial optimization in enterprise ($3B+)
-SAM (Serviceable Addressable Market):
-  - Target industries: manufacturing, logistics, automotive, CPG, retail
-  - Serviceable market includes plugin-compatible enterprises with digital operations and data lakes
-  - SAM estimate: ~$6B based on verticals addressable through Dimiour-like deployments and plugin architecture
-
 Market Overview (TAM / SAM / SOM / SOR):
 - TAM: $20B+ Global spend on AI-enabled decision optimization, forecasting, planning, and scheduling in enterprise environments exceeds $20B+
 - SAM: $6B Target industries: manufacturing, logistics, automotive, CPG, retail. Serviceable market includes plugin-compatible enterprises with digital operations and data lakes. SAM estimate: ~$6B based on verticals addressable through Dimiour-like deployments and plugin architecture
