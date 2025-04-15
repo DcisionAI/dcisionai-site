@@ -1,13 +1,13 @@
-OptIQ is a decision intelligence platform that augments optimization models with agentic AI and real-time data. It connects to internal data lakes and external data sources, retrieving live variables and constraints to dynamically adapt decisions.
+DcisionAI is a decision intelligence platform that augments optimization models with agentic AI and real-time data. It connects to internal data lakes and external data sources, retrieving live variables and constraints to dynamically adapt decisions.
 
 Its core architecture includes:
 - **Model**: Optimizers (e.g. LP, MILP, heuristics)
 - **Context**: Real-time data from customer environments
 - **Protocol**: Governed workflows that adapt over time
 
-OptIQ uses a plug-in system that installs into enterprise environments, avoiding disruptive replatforming. It explains every decision, tracks override history, and supports human-in-the-loop adjustments.
+DcisionAI uses a plug-in system that installs into enterprise environments, avoiding disruptive replatforming. It explains every decision, tracks override history, and supports human-in-the-loop adjustments.
 
-OptIQ is being co-developed with Dimiour, with use cases across:
+DcisionAI is being co-developed with Dimiour, with use cases across:
 1. **Fleet Optimization** (VGO): Dynamic routing, truck capacity planning, shipment bundling
 2. **Supply Chain**: SKU transfers across warehouses, stockout reduction, inventory placement
 3. **Workforce Planning**: Shift optimization based on demand and skills
@@ -35,4 +35,4 @@ Investor positioning:
 - Fast wedge via Dimiour deployments
 - Founder committed with skin-in-the-game and pledge structure
 
-OptIQ = OpenAI-style decision orchestration for enterprise.
+DcisionAI = OpenAI-style decision orchestration for enterprise.
