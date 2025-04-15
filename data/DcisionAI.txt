@@ -38,9 +38,11 @@ SAM (Serviceable Addressable Market):
   - Target industries: manufacturing, logistics, automotive, CPG, retail
   - Serviceable market includes plugin-compatible enterprises with digital operations and data lakes
   - SAM estimate: ~$6B based on verticals addressable through Dimiour-like deployments and plugin architecture
-SOM (Serviceable Obtainable Market):
-  - Initial GTM via Dimiour products across 5–7 enterprise customers
-  - SOM (first 12–18 months): $2–5M in ARR from Dimiour-enabled upsell motion
+
+Market Overview (TAM / SAM / SOM / SOR):
+- TAM: $20B+ Global spend on AI-enabled decision optimization, forecasting, planning, and scheduling in enterprise environments exceeds $20B+
+- SAM: $6B Target industries: manufacturing, logistics, automotive, CPG, retail. Serviceable market includes plugin-compatible enterprises with digital operations and data lakes. SAM estimate: ~$6B based on verticals addressable through Dimiour-like deployments and plugin architecture
+- SOM: $2–5M initial ARR with GTM via Dimiour products across 5–7 enterprise customers with Dimiour-enabled upsell motion
 
 
 - Post-Seed, SOR expands via:
