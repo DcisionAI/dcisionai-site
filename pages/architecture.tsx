@@ -105,34 +105,63 @@ export default function ArchitecturePage() {
         )}
 
         {activeStage === "Architecture" && (
-  <div className="grid md:grid-cols-2 gap-8 items-start">
-    <div>
-      <h2 className="text-2xl font-semibold">The DcisionAI Architecture</h2>
-      <p className="mt-2">
-        The core of DcisionAI is a plug-in platform governed by the MCP framework:
-      </p>
-      <ul className="list-disc pl-6 mt-4 space-y-1">
-        <li><strong>Model:</strong> Optimization and AI functions, composable and reusable</li>
-        <li><strong>Context:</strong> Real-time variables, constraints, and user signals</li>
-        <li><strong>Protocol:</strong> Rules, overrides, traceability, and decision governance</li>
-      </ul>
-      <p className="mt-4">
-        This architecture powers agents that don’t just automate — they adapt, learn, and remain under human oversight.
-      </p>
-      <div className="mt-8">
-        <a
-          href="/use-cases"
-          className="inline-block bg-[var(--tw-brand-accent)] text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition"
-        >
-          Explore Use Cases
-        </a>
-      </div>
-    </div>
-    <div className="flex justify-center">
-      <img src="/images/architecture.png" alt="DcisionAI Architecture Diagram" className="rounded-xl shadow-md w-full max-w-md" />
-    </div>
-  </div>
-)}
+          <div id="Architecture" className="grid md:grid-cols-2 gap-8 items-start">
+            <div>
+              <h2 className="text-2xl font-semibold">The DcisionAI Architecture</h2>
+              <p className="mt-2">
+                At its core, DcisionAI is a plug-in platform governed by the MCP framework:
+              </p>
+              <ul className="list-disc pl-6 mt-4 space-y-1">
+                <li><strong>Model:</strong> Optimization and AI functions, composable and reusable</li>
+                <li><strong>Context:</strong> Real-time variables, constraints, and user signals</li>
+                <li><strong>Protocol:</strong> Rules, overrides, traceability, and decision governance</li>
+              </ul>
+              <p className="mt-4">
+                This architecture powers agents that don’t just automate — they adapt, learn, and remain under human oversight.
+              </p>
+
+              {/* Sample Protocol */}
+              <div className="mt-6">
+                <h3 className="text-lg font-semibold mb-2">Sample Protocol</h3>
+                <div className="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-t-md w-fit mb-0">
+                  adaptive-pricing.json
+                </div>
+                <pre className="bg-zinc-900 text-green-200 text-sm font-mono rounded-b-md p-4 whitespace-pre overflow-x-auto max-w-full">
+              {`{
+                "name": "adaptive-pricing",
+                "model": "pricing-optimizer-v3",
+                "context": ["sku", "inventory", "region", "demand-forecast"],
+                "protocol": {
+                  "onTrigger": "every 15 mins",
+                  "constraints": ["no price drop >10%"],
+                  "overrideRule": "manager-approval-if > $1000 impact"
+                }
+              }`}
+                </pre>
+              </div>
+
+
+
+              <div className="mt-8">
+                <a
+                  href="/use-cases"
+                  className="inline-block bg-[var(--tw-brand-accent)] text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition"
+                >
+                  Explore Use Cases
+                </a>
+              </div>
+            </div>
+
+            <div className="flex justify-center">
+              <img
+                src="/images/architecture.png"
+                alt="DcisionAI Architecture Diagram"
+                className="rounded-xl shadow-md w-full max-w-md"
+              />
+            </div>
+          </div>
+        )}
+
       </div>
     </section>
   );
