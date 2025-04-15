@@ -9,8 +9,7 @@ export default function InvestorsPage() {
           DcisionAI is redefining decision-making infrastructure — combining agentic AI, mathematical optimization, and plug-in architecture to power the next generation of enterprise operations.
         </p>
         <p className="mt-3 max-w-2xl text-md text-brand-muted">
-          Founded by a former enterprise product leader, a PhD optimization expert, and a strategic engineering partner, we bring deep technical and domain expertise to a clear market wedge — and are already piloting with high-intensity enterprise use cases.
-        </p>
+        Founded by a former enterprise product leader, a PhD optimization expert, and an established product partner with a proven track record in enterprise products, we bring deep technical and domain expertise to a clear market wedge — and are already piloting with high-intensity enterprise use cases.        </p>
       </section>
 
       <section className="py-8 px-4 max-w-6xl mx-auto text-center space-y-12">
