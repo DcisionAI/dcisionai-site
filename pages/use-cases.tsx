@@ -27,7 +27,7 @@ export default function UseCasesPage() {
   return (
     <section >
       <div className="max-w-6xl mx-auto text-center">
-        <h1 className="text-4xl md:text-5xl font-serif font-semibold">
+        <h1 className="text-4xl md:text-5xl font-sans font-semibold">
           Real Problems. Intelligent Solutions.
         </h1>
         <p className="mt-4 max-w-2xl mx-auto text-lg text-neutral-600">

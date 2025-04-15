@@ -52,7 +52,7 @@ Logs are versioned and auditable — making trust and traceability native to the
   return (
     <section className="w-full px-6 py-20 space-y-16">
       <div className="text-center mb-12">
-        <h1 className="text-5xl font-serif font-semibold text-[var(--tw-brand-accent)]">
+        <h1 className="text-5xl font-sans antialiased font-semibold text-[var(--tw-brand-accent)]">
           DcisionAI System Architecture
         </h1>
         <p className="mt-6 text-lg text-[var(--tw-brand-muted)] max-w-3xl mx-auto">
