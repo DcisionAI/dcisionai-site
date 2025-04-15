@@ -30,7 +30,7 @@ ODC (Offshore Development Center) Setup:
 - Optimized for cost-efficiency and speed without compromising quality
 - Positioned as a long-term co-development arm through Series A
 
-TAM / SAM / SOM:
+TAM / SAM / SOM / Market:
 - TAM (Total Addressable Market):
   - Global spend on AI-enabled decision optimization, forecasting, planning, and scheduling in enterprise environments exceeds $20B+
   - Includes supply chain AI ($11B+), workforce planning software ($5B+), and financial optimization in enterprise ($3B+)
