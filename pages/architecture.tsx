@@ -52,7 +52,10 @@ export default function ArchitecturePage() {
               <li><strong>2020s:</strong> ML & AI Agents — adaptive, composable, explainable</li>
             </ul>
             <p className="mt-4">
-              Legacy tools emphasized reporting or static optimization. Today’s decisions require real-time, interdependent, and explainable orchestration.
+              Legacy tools emphasized reporting or static optimization. Today’s decisions require real-time, interdependent, and explainable orchestration — where decisions evolve alongside the business.
+            </p>
+            <p className="mt-2 italic text-sm text-neutral-500">
+              We combine decades of operations research with the latest in AI agents — giving enterprises adaptive control without losing traceability.
             </p>
           </div>
         )}
@@ -69,7 +72,7 @@ export default function ArchitecturePage() {
               <li><strong>Prescriptive:</strong> What should we do?</li>
             </ul>
             <p className="mt-4">
-              While most platforms stop at forecasting, DcisionAI is prescriptive by design — embedding AI into operational flows with governance and explainability.
+              While most platforms stop at forecasting, DcisionAI is prescriptive by design — embedding intelligence directly into operational decisions, governed by transparent protocols.
             </p>
           </div>
         )}
@@ -78,10 +81,10 @@ export default function ArchitecturePage() {
           <div>
             <h2 className="text-2xl font-semibold">Why Optimization Still Matters</h2>
             <p>
-              Optimization has long been the core of operations research — powering decisions across supply chains, finance, logistics, and workforce planning.
+              Optimization is the foundation of intelligent operations. From logistics and pricing to inventory and resource planning, mathematical optimization has proven reliable — but often inaccessible or static.
             </p>
             <p className="mt-4">
-              From linear programming and MIP to scenario simulation and stochastic planning, DcisionAI wraps these capabilities in agentic wrappers that make optimization reusable, explainable, and safe.
+              DcisionAI wraps proven optimization techniques (LP, MIP, simulation) inside agentic wrappers — making them adaptable, explainable, and safe for continuous enterprise deployment.
             </p>
           </div>
         )}
@@ -90,16 +93,16 @@ export default function ArchitecturePage() {
           <div>
             <h2 className="text-2xl font-semibold">The Rise of AI Agents</h2>
             <p>
-              Today’s LLMs are not just chat interfaces — they’re reasoning engines capable of workflows, tool use, and protocol execution.
+              AI agents are the next evolution in enterprise automation. These are not just LLMs — some agents wrap traditional solvers or custom business logic. What defines them is their autonomy, memory, and ability to adapt.
             </p>
             <ul className="list-disc pl-6 mt-2 space-y-1">
-              <li><strong>Models:</strong> Perform reasoning and generation</li>
-              <li><strong>Memory:</strong> Track state and context</li>
-              <li><strong>Tools:</strong> Connect to APIs, solvers, or databases</li>
-              <li><strong>Protocols:</strong> Govern how agents behave and improve</li>
+              <li><strong>Models:</strong> Handle reasoning and generation</li>
+              <li><strong>Memory:</strong> Store state and evolving context</li>
+              <li><strong>Tools:</strong> Invoke APIs, solvers, internal systems</li>
+              <li><strong>Protocols:</strong> Define how decisions are made, approved, and overridden</li>
             </ul>
             <p className="mt-4">
-              DcisionAI lets enterprises deploy safe, business-aligned agents grounded in real-time data, approved logic, and operational context.
+              DcisionAI enables enterprises to configure and deploy agents that align with operational policy, data governance, and evolving business logic — all within a secure, explainable, and human-in-the-loop framework.
             </p>
           </div>
         )}
@@ -112,56 +115,59 @@ export default function ArchitecturePage() {
                 At its core, DcisionAI is a plug-in platform governed by the MCP framework:
               </p>
               <ul className="list-disc pl-6 mt-4 space-y-1">
-                <li><strong>Model:</strong> Optimization and AI functions, composable and reusable</li>
-                <li><strong>Context:</strong> Real-time variables, constraints, and user signals</li>
-                <li><strong>Protocol:</strong> Rules, overrides, traceability, and decision governance</li>
+                <li><strong>Model:</strong> Composable AI/optimization modules</li>
+                <li><strong>Context:</strong> Real-time inputs, constraints, and user signals</li>
+                <li><strong>Protocol:</strong> Governance layer for overrides, traceability, and improvement</li>
               </ul>
               <p className="mt-4">
-                This architecture powers agents that don’t just automate — they adapt, learn, and remain under human oversight.
+                The architecture is plugin-native — it connects to customer data sources via secure, configurable adapters. Whether it's ERP, warehouse, or CRM data, agents operate contextually without requiring data migration.
               </p>
+              <p className="mt-4">
+                This allows DcisionAI to plug into enterprise systems, ingest real-time context, invoke optimization or reasoning agents, and route outputs through governed protocols — with traceability and human oversight.
+              </p>
+              <p className="mt-4 text-sm text-neutral-600">
+                Example features include millisecond-level latency for pricing updates, stream-based context ingestion, plugin-based architecture for enterprise data, and policy-governed override logic.
+              </p>
+            </div>
+
+            <div className="flex flex-col items-center gap-8">
+              <img
+                src="/images/architecture-1.png"
+                alt="DcisionAI Architecture Diagram"
+                className="rounded-xl shadow-md w-full max-w-xl"
+              />
 
               {/* Sample Protocol */}
-              <div className="mt-6">
-                <h3 className="text-lg font-semibold mb-2">Sample Protocol</h3>
-                <div className="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-t-md w-fit mb-0">
+              <div className="w-full">
+                <h3 className="text-lg font-semibold mb-1">Sample Protocol</h3>
+                <div className="text-xs font-medium bg-zinc-800 text-zinc-300 px-3 py-1 rounded-t-md w-fit">
                   adaptive-pricing.json
                 </div>
                 <pre className="bg-zinc-900 text-green-200 text-sm font-mono rounded-b-md p-4 whitespace-pre overflow-x-auto max-w-full">
-              {`{
-                "name": "adaptive-pricing",
-                "model": "pricing-optimizer-v3",
-                "context": ["sku", "inventory", "region", "demand-forecast"],
-                "protocol": {
-                  "onTrigger": "every 15 mins",
-                  "constraints": ["no price drop >10%"],
-                  "overrideRule": "manager-approval-if > $1000 impact"
-                }
-              }`}
+{`{
+  "name": "adaptive-pricing",
+  "model": "pricing-optimizer-v3",
+  "context": ["sku", "inventory", "region", "demand-forecast"],
+  "protocol": {
+    "onTrigger": "every 15 mins",
+    "constraints": ["no price drop >10%"],
+    "overrideRule": "manager-approval-if > $1000 impact"
+  }
+}`}
                 </pre>
               </div>
-
-
-
-              <div className="mt-8">
-                <a
-                  href="/use-cases"
-                  className="inline-block bg-[var(--tw-brand-accent)] text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition"
-                >
-                  Explore Use Cases
-                </a>
-              </div>
-            </div>
-
-            <div className="flex justify-center">
-              <img
-                src="/images/architecture.png"
-                alt="DcisionAI Architecture Diagram"
-                className="rounded-xl shadow-md w-full max-w-md"
-              />
             </div>
           </div>
         )}
+      </div>
 
+      <div className="mt-12 flex justify-center">
+        <a
+          href="/use-cases"
+          className="inline-block bg-[var(--tw-brand-accent)] text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition"
+        >
+          Explore Use Cases
+        </a>
       </div>
     </section>
   );
