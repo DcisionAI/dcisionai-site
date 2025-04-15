@@ -100,9 +100,12 @@ export default function UseCasesPage() {
     }
   ];
 
+  const [selectedIndustry, setSelectedIndustry] = React.useState("Logistics & Transportation");
+  const filtered = useCases.filter(u => !selectedIndustry || u.industry === selectedIndustry);
+
   return (
-    <section>
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="animate-fade-in-up">
+      <div className="max-w-6xl mx-auto text-center mt-10">
         <h1 className="text-4xl md:text-5xl font-sans font-semibold">
           Real Problems. Intelligent Solutions.
         </h1>
@@ -110,34 +113,70 @@ export default function UseCasesPage() {
           Explore how DcisionAI powers smarter operations across industries — from supply chain and finance to retail and workforce planning.
         </p>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-10">
-          {useCases.map(({ industry, title, challenge, solution, impact, howItWorks }) => (
-            <div
-              key={title}
-              className="bg-white rounded-xl shadow-md p-6 flex flex-col gap-4 hover:shadow-lg transition duration-300 text-left"
+        {/* Filter Toggle Bar */}
+        <div className="flex justify-center mt-8">
+          <div className="flex flex-wrap justify-center gap-3 bg-[var(--tw-brand-light)] rounded-full px-4 py-2 shadow-sm">
+            {Array.from(new Set(useCases.map(u => u.industry))).map(industry => (
+              <button
+                key={industry}
+                className={`px-4 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 ${
+                  selectedIndustry === industry
+                    ? 'bg-[var(--tw-brand-accent)] text-white'
+                    : 'bg-transparent text-neutral-600 hover:text-black'
+                }`}
+                onClick={() => setSelectedIndustry(industry)}
+              >
+                {industry}
+              </button>
+            ))}
+            <button
+              className={`px-4 py-1.5 text-sm font-medium rounded-full transition-colors duration-200 ${
+                !selectedIndustry ? 'bg-[var(--tw-brand-accent)] text-white' : 'bg-transparent text-neutral-600 hover:text-black'
+              }`}
+              onClick={() => setSelectedIndustry(null)}
             >
-              <p className="text-sm uppercase text-neutral-400 font-semibold">{industry}</p>
-              <h2 className="text-xl font-semibold text-neutral-800">{title}</h2>
-              <div className="space-y-2 text-sm md:text-base text-neutral-700">
-                <div>
-                  <p className="font-semibold text-neutral-800 mb-1">The Challenge</p>
-                  <p>{challenge}</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-neutral-800 mb-1">The Solution</p>
-                  <p>{solution}</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-neutral-800 mb-1">The Result</p>
-                  <p>{impact}</p>
-                </div>
-                <div>
-                  <p className="font-semibold text-neutral-800 mb-1">How It Works</p>
-                  <p>{howItWorks}</p>
+              All
+            </button>
+          </div>
+        </div>
+
+        {/* Use Case Cards */}
+        <div className={`mt-16 grid gap-8 ${
+          filtered.length === 1 ? 'grid-cols-1 justify-center' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'
+        }`} data-aos="fade-up" data-aos-delay="100" data-aos-once="true">
+          {filtered.length === 0 ? (
+            <div className="col-span-full text-center text-neutral-500 py-12 animate-fade-in">
+              No use cases found for this industry.
+            </div>
+          ) : (
+            filtered.map(({ industry, title, challenge, solution, impact, howItWorks }) => (
+              <div
+                key={title}
+                className="relative group rounded-2xl border border-neutral-200 bg-[var(--tw-brand-light)] p-6 text-left shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out overflow-hidden hover:-translate-y-1 hover:border-brand-accent animate-fade-in-up"
+              >
+                <p className="text-sm uppercase text-neutral-400 font-semibold">{industry}</p>
+                <h2 className="text-2xl font-serif font-semibold text-neutral-800 group-hover:text-brand-accent transition">{title}</h2>
+                <div className="space-y-2 text-sm md:text-base text-neutral-700">
+                  <div>
+                    <p className="font-semibold text-neutral-800 mb-1">The Challenge</p>
+                    <p>{challenge}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-neutral-800 mb-1">The Solution</p>
+                    <p>{solution}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-neutral-800 mb-1">The Result</p>
+                    <p>{impact}</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-neutral-800 mb-1">How It Works</p>
+                    <p>{howItWorks}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))
+          )}
         </div>
       </div>
     </section>

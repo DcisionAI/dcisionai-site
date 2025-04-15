@@ -1,91 +1,138 @@
-import Image from 'next/image';
+import { useState } from "react";
+
+const STAGES = [
+  "History",
+  "Analytics",
+  "Optimization",
+  "AI Agents",
+  "Architecture",
+];
 
 export default function ArchitecturePage() {
-  const sections = [
-    {
-      title: 'MCP-Orchestrated Architecture',
-      body: `DcisionAI implements an evolved MCP (Model–Context–Protocol) architecture to coordinate intelligent decision-making across composable agents. Each layer is modular, auditable, and adaptable to enterprise constraints and goals.`
-    },
-    {
-      title: 'Model Layer',
-      body: `Encapsulates decision logic, mathematical optimization (LP, MIP), heuristics, ML/AI models, business rules, and forecasting modules. Models are plug-ins that can be injected, composed, and swapped.
-
-Example: A cost optimization model, a staff allocation heuristic, or an LLM fine-tuned for planning language.`
-    },
-    {
-      title: 'Context Layer',
-      body: `Aggregates structured and unstructured data in real time. Context transforms raw data from data lakes, APIs, and external signals into actionable state variables and constraints.
-
-Example: Real-time demand signals, supply constraints, labor availability, forecast uncertainty.`
-    },
-    {
-      title: 'Protocol Layer',
-      body: `Defines flow logic — which model to use, how agents coordinate, and what fallback paths to take. Protocols are declarative, auditable, and composable.
-
-Example: “If forecast confidence > 90%, use LP optimizer; else fallback to rule-based plan and flag uncertainty for review.”`
-    },
-    {
-      title: 'Agent Composition',
-      body: `Specialized agents execute parts of the MCP cycle:
-- Perception agents: ingest and process data
-- Planning agents: invoke models
-- Execution agents: follow protocols
-- Governance agents: enforce rules and explainability
-
-Agents coordinate over shared memory with a protocol-aware runtime.`
-    },
-    {
-      title: 'Plug-In Runtime',
-      body: `The architecture is built on a plug-in framework. Customers can register new models, customize context pipelines, and override protocols without modifying core logic.`
-    },
-    {
-      title: 'Explainability by Construction',
-      body: `Every decision is explainable by default:
-1. Protocol = why
-2. Model = how
-3. Context = what
-
-Logs are versioned and auditable — making trust and traceability native to the system.`
-    }
-  ];
+  const [activeStage, setActiveStage] = useState("History");
 
   return (
-    <section className="w-full px-6 py-20 space-y-16">
-      <div className="text-center mb-12">
-        <h1 className="text-5xl font-sans antialiased font-semibold text-[var(--tw-brand-accent)]">
-          DcisionAI System Architecture
-        </h1>
-        <p className="mt-6 text-lg text-[var(--tw-brand-muted)] max-w-3xl mx-auto">
-          A modern agentic architecture grounded in Model–Context–Protocol (MCP) principles and built for composability, explainability, and intelligent enterprise execution.
-        </p>
+    <section className="max-w-6xl mx-auto px-6 py-16 font-sans">
+      <h1 className="text-4xl md:text-5xl font-semibold text-center tracking-tight mb-4">
+        Built for Complexity. Designed for Control.
+      </h1>
+      <p className="text-center text-neutral-600 mb-8 max-w-2xl mx-auto">
+        Walk through the evolution of enterprise decision-making — from static rules to agentic orchestration.
+      </p>
+
+      {/* TOGGLE BAR */}
+      <div className="flex flex-wrap justify-center gap-3 bg-[var(--tw-brand-light)] rounded-full px-4 py-2 mb-12 shadow-sm">
+        {STAGES.map((stage) => (
+          <button
+            key={stage}
+            className={`px-4 py-1.5 rounded-full text-sm font-medium transition ${
+              activeStage === stage
+                ? "bg-[var(--tw-brand-accent)] text-white"
+                : "text-neutral-700 hover:text-black"
+            }`}
+            onClick={() => setActiveStage(stage)}
+          >
+            {stage}
+          </button>
+        ))}
       </div>
 
-      <div className="grid md:grid-cols-2 gap-12 max-w-7xl mx-auto items-start">
-        <div className="space-y-8">
-          {sections.map((item, i) => (
-            <div key={i} className="bg-white/60 backdrop-blur-md rounded-lg p-5 shadow-md">
-              <h3 className="text-xl font-semibold text-[var(--tw-brand-accent)]">{item.title}</h3>
-              <p className="mt-2 text-sm text-[var(--tw-brand-muted)] whitespace-pre-line">{item.body}</p>
-            </div>
-          ))}
-        </div>
+      {/* CONTENT */}
+      <div className="transition-all duration-300 ease-in-out space-y-6 text-lg text-neutral-800 bg-[var(--tw-brand-light)] rounded-2xl p-6 shadow-sm">
+        {activeStage === "History" && (
+          <div>
+            <h2 className="text-2xl font-semibold">The Evolution of Decision Systems</h2>
+            <p>
+              From rule-based expert systems in the 1980s to today’s agentic architectures, enterprise decision-making has followed a recognizable arc:
+            </p>
+            <ul className="list-disc pl-6 mt-2 space-y-1">
+              <li><strong>1980s–1990s:</strong> Rules & Heuristics — brittle under complexity</li>
+              <li><strong>2000s:</strong> BI & Dashboards — descriptive but not actionable</li>
+              <li><strong>2010s:</strong> Optimization & Forecasting — powerful but siloed</li>
+              <li><strong>2020s:</strong> ML & AI Agents — adaptive, composable, explainable</li>
+            </ul>
+            <p className="mt-4">
+              Legacy tools emphasized reporting or static optimization. Today’s decisions require real-time, interdependent, and explainable orchestration.
+            </p>
+          </div>
+        )}
 
-        <div className="w-full">
-          <Image
-            src="/images/architecture.png"
-            alt="DcisionAI MCP Architecture Diagram"
-            width={900}
-            height={600}
-            className="rounded-lg shadow-lg w-full h-auto"
-          />
-          <Image
-            src="/images/how-it-works.png"
-            alt="DcisionAI MCP Architecture Diagram"
-            width={900}
-            height={600}
-            className="rounded-lg shadow-lg w-full h-auto"
-          />
-        </div>
+        {activeStage === "Analytics" && (
+          <div>
+            <h2 className="text-2xl font-semibold">The Analytics Continuum</h2>
+            <p className="mb-2">
+              Analytics has matured through three primary layers — each offering increasing leverage:
+            </p>
+            <ul className="list-disc pl-6 mt-2 space-y-1">
+              <li><strong>Descriptive:</strong> What happened?</li>
+              <li><strong>Predictive:</strong> What is likely to happen?</li>
+              <li><strong>Prescriptive:</strong> What should we do?</li>
+            </ul>
+            <p className="mt-4">
+              While most platforms stop at forecasting, DcisionAI is prescriptive by design — embedding AI into operational flows with governance and explainability.
+            </p>
+          </div>
+        )}
+
+        {activeStage === "Optimization" && (
+          <div>
+            <h2 className="text-2xl font-semibold">Why Optimization Still Matters</h2>
+            <p>
+              Optimization has long been the core of operations research — powering decisions across supply chains, finance, logistics, and workforce planning.
+            </p>
+            <p className="mt-4">
+              From linear programming and MIP to scenario simulation and stochastic planning, DcisionAI wraps these capabilities in agentic wrappers that make optimization reusable, explainable, and safe.
+            </p>
+          </div>
+        )}
+
+        {activeStage === "AI Agents" && (
+          <div>
+            <h2 className="text-2xl font-semibold">The Rise of AI Agents</h2>
+            <p>
+              Today’s LLMs are not just chat interfaces — they’re reasoning engines capable of workflows, tool use, and protocol execution.
+            </p>
+            <ul className="list-disc pl-6 mt-2 space-y-1">
+              <li><strong>Models:</strong> Perform reasoning and generation</li>
+              <li><strong>Memory:</strong> Track state and context</li>
+              <li><strong>Tools:</strong> Connect to APIs, solvers, or databases</li>
+              <li><strong>Protocols:</strong> Govern how agents behave and improve</li>
+            </ul>
+            <p className="mt-4">
+              DcisionAI lets enterprises deploy safe, business-aligned agents grounded in real-time data, approved logic, and operational context.
+            </p>
+          </div>
+        )}
+
+        {activeStage === "Architecture" && (
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    <div>
+      <h2 className="text-2xl font-semibold">The DcisionAI Architecture</h2>
+      <p className="mt-2">
+        The core of DcisionAI is a plug-in platform governed by the MCP framework:
+      </p>
+      <ul className="list-disc pl-6 mt-4 space-y-1">
+        <li><strong>Model:</strong> Optimization and AI functions, composable and reusable</li>
+        <li><strong>Context:</strong> Real-time variables, constraints, and user signals</li>
+        <li><strong>Protocol:</strong> Rules, overrides, traceability, and decision governance</li>
+      </ul>
+      <p className="mt-4">
+        This architecture powers agents that don’t just automate — they adapt, learn, and remain under human oversight.
+      </p>
+      <div className="mt-8">
+        <a
+          href="/use-cases"
+          className="inline-block bg-[var(--tw-brand-accent)] text-white font-medium px-6 py-3 rounded-full hover:opacity-90 transition"
+        >
+          Explore Use Cases
+        </a>
+      </div>
+    </div>
+    <div className="flex justify-center">
+      <img src="/images/architecture.png" alt="DcisionAI Architecture Diagram" className="rounded-xl shadow-md w-full max-w-md" />
+    </div>
+  </div>
+)}
       </div>
     </section>
   );
