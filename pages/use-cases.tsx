@@ -155,7 +155,7 @@ export default function UseCasesPage() {
                 className="relative group rounded-2xl border border-neutral-200 bg-[var(--tw-brand-light)] p-6 text-left shadow-sm hover:shadow-lg transition-all duration-300 ease-in-out overflow-hidden hover:-translate-y-1 hover:border-brand-accent animate-fade-in-up"
               >
                 <p className="text-sm uppercase text-neutral-400 font-semibold">{industry}</p>
-                <h2 className="text-2xl font-serif font-semibold text-neutral-800 group-hover:text-brand-accent transition">{title}</h2>
+                <h2 className="text-2xl font-sans font-semibold text-neutral-800 group-hover:text-brand-accent transition">{title}</h2>
                 <div className="space-y-2 text-sm md:text-base text-neutral-700">
                   <div>
                     <p className="font-semibold text-neutral-800 mb-1">The Challenge</p>
