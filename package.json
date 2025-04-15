@@ -2,7 +2,7 @@
   "name": "dcisionai-react",
   "version": "1.0.0",
   "scripts": {
-    "postinstall": "npm install langchain@^0.1.60 --legacy-peer-deps",
+    "postinstall": "npm install langchain@0.1.23 --legacy-peer-deps",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
