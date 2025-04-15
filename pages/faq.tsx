@@ -6,36 +6,45 @@ const FAQ = () => {
   const [chatResponse, setChatResponse] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (chatInput.trim()) {
-      setLoading(true);
-    fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Authorization": `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`
-      },
-      body: JSON.stringify({
-        model: "gpt-3.5-turbo",
-        messages: [
-          { role: "system", content: "You are a helpful assistant that only answers questions about DcisionAI." },
-          { role: "user", content: chatInput }
-        ]
-      })
-    })
-      .then(res => res.json())
-      .then(data => {
-        setChatResponse(data.choices?.[0]?.message?.content || "No response");
-        setLoading(false);
-      })
-      .catch(err => {
-        setChatResponse("An error occurred while fetching response.");
-        setLoading(false);
+    if (!chatInput.trim()) return;
+  
+    setLoading(true);
+    setChatResponse("");
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          messages: [
+            {
+            role: "system",
+            content: `You are a helpful assistant that *only* answers questions related to DcisionAI.
+              If the user asks anything unrelated to DcisionAI, politely respond with: 
+              “Sorry, I can only answer questions about DcisionAI.”`
+              }
+              ,
+            {
+              role: "user",
+              content: chatInput,
+            },
+          ],
+        }),
       });
+  
+      const data = await res.json();
+      setChatResponse(data.reply || "No response from DcisionAI.");
+    } catch (err) {
+      console.error("Client error:", err);
+      setChatResponse("An error occurred while contacting the assistant.");
+    } finally {
+      setLoading(false);
     }
   };
-
+  
   return (
     <section id="faq" className="max-w-5xl mx-auto px-6 py-20 bg-transparent">
       {/* OpenAI Chat Box */}
