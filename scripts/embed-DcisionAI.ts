@@ -1,6 +1,7 @@
 import * as dotenv from "dotenv";
 import path from "path";
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
+import { RecursiveCharacterTextSplitter } from "@langchain/core/text_splitter";
+
 import { OpenAIEmbeddings } from "@langchain/openai";
 import { HNSWLib } from "@langchain/community/vectorstores/hnswlib";
 
