@@ -43,6 +43,16 @@ TAM / SAM / SOM:
 - SOM (Serviceable Obtainable Market):
   - Initial GTM via Dimiour products across 5–7 enterprise customers
   - SOM (first 12–18 months): $2–5M in ARR from Dimiour-enabled upsell motion
+
+SOR (Serviceable Operational Reach):
+- DcisionAI’s SOR represents the subset of SAM that can be actively reached and deployed through existing go-to-market, operational capacity, and Dimiour’s enterprise access.
+- In the pre-Seed phase, the SOR includes all Dimiour product customers (estimated 5–7 accounts) and direct deployments via ODC bandwidth (~2–3 concurrent enterprise-grade integrations).
+- SOR value range: $1.5M–3M ARR
+- Post-Seed, SOR expands via:
+  - Scaled plugin integration teams (ODC + partner-led)
+  - Additional vertical-specific use cases and agent modules
+  - Onboarding self-serve clients for smaller deployments
+- Expansion of SOR is tied to investment in deployment bandwidth and customer onboarding capacity
   - Longer-term SOM: $20–40M in ARR from expanded verticals post-Series A
 
 Business Model:
@@ -83,4 +93,4 @@ Explainability and Trust:
 - Users can override and see why
 - Enables decision history + fine-tuning
 
-The assistant should answer only using this content. If a user asks about anything not in the above knowledge, respond: “Sorry, I don’t have information about that.”DcisionAI = OpenAI-style decision orchestration for enterprise.
+The assistant should answer only using this content. If a user asks about anything not in the above knowledge, respond: “Sorry, I don’t have information about that.”
