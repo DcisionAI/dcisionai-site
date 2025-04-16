@@ -54,7 +54,7 @@ export default function ArchitecturePage() {
             <p className="mt-4">
               Legacy tools emphasized reporting or static optimization. Today’s decisions require real-time, interdependent, and explainable orchestration — where decisions evolve alongside the business.
             </p>
-            <p className="mt-2 italic text-sm text-neutral-500">
+            <p className="mt-4 italic text-neutral-500">
               We combine decades of operations research with the latest in AI agents — giving enterprises adaptive control without losing traceability.
             </p>
           </div>
@@ -71,7 +71,7 @@ export default function ArchitecturePage() {
               <li><strong>Predictive:</strong> What is likely to happen?</li>
               <li><strong>Prescriptive:</strong> What should we do?</li>
             </ul>
-            <p className="mt-4">
+            <p className="mt-4 italic text-neutral-500">
               While most platforms stop at forecasting, DcisionAI is prescriptive by design — embedding intelligence directly into operational decisions, governed by transparent protocols.
             </p>
           </div>
@@ -83,7 +83,7 @@ export default function ArchitecturePage() {
             <p>
               Optimization is the foundation of intelligent operations. From logistics and pricing to inventory and resource planning, mathematical optimization has proven reliable — but often inaccessible or static.
             </p>
-            <p className="mt-4">
+            <p className="mt-4 italic text-neutral-500">
               DcisionAI wraps proven optimization techniques (LP, MIP, simulation) inside agentic wrappers — making them adaptable, explainable, and safe for continuous enterprise deployment.
             </p>
           </div>
@@ -101,7 +101,7 @@ export default function ArchitecturePage() {
               <li><strong>Tools:</strong> Invoke APIs, solvers, internal systems</li>
               <li><strong>Protocols:</strong> Define how decisions are made, approved, and overridden</li>
             </ul>
-            <p className="mt-4">
+            <p className="mt-4 italic text-neutral-500">
               DcisionAI enables enterprises to configure and deploy agents that align with operational policy, data governance, and evolving business logic — all within a secure, explainable, and human-in-the-loop framework.
             </p>
           </div>
