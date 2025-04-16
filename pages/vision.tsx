@@ -22,7 +22,7 @@ export default function VisionPage() {
   }, []);
 
   return (
-    <section className="min-h-screen w-full px-6 py-20 space-y-20">
+    <section className="min-h-screen w-full px-6 py-10 space-y-20">
       <div className="text-center fade-section opacity-0 transition-all duration-1000">
         <h1 className="text-5xl font-sans font-semibold text-[var(--tw-brand-accent)]">
           Shaping the Future of Enterprise Intelligence
@@ -57,8 +57,6 @@ export default function VisionPage() {
           </p>
         </div>
       </div>
-
-      <JourneyMap />
     </section>
   );
 }

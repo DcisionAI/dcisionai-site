@@ -54,8 +54,8 @@ export default function JourneyMap() {
   }, []);
 
   return (
-    <section className="w-full px-6 py-16 bg-[var(--tw-brand-primary)]/40 backdrop-blur-sm">
-      <h2 className="text-3xl font-serif font-semibold text-center text-[var(--tw-brand-accent)] mb-8">
+    <section className="w-full px-6 py-1 bg-[var(--tw-brand-primary)]/40 backdrop-blur-sm">
+      <h2 className="text-3xl font-sans font-semibold text-center text-[var(--tw-brand-accent)] mb-8">
         The Evolution of Enterprise Decision-Making
       </h2>
       <div className="flex overflow-x-auto space-x-6 snap-x snap-mandatory px-2 md:px-10">
