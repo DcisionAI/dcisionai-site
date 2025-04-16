@@ -9,6 +9,7 @@ import { HNSWLib } from "@langchain/community/vectorstores/hnswlib";
 dotenv.config({ path: ".env.local" });
 const fs = require("fs");
 
+
 const run = async () => {
   const rawText = fs.readFileSync("data/DcisionAI.txt", "utf8");
 
