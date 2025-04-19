@@ -8,8 +8,7 @@ export default function InvestorsPage() {
         <p className="mt-4 max-w-2xl text-lg text-brand-muted">
           DcisionAI is redefining decision-making infrastructure — combining agentic AI, mathematical optimization, and plug-in architecture to power the next generation of enterprise operations.
         </p>
-        <p className="mt-3 max-w-2xl text-md text-brand-muted">
-        Founded by a former enterprise product leader, a PhD optimization expert, and an established product partner with a proven track record in enterprise products, we bring deep technical and domain expertise to a clear market wedge — and are already piloting with high-intensity enterprise use cases.        </p>
+        
       </section>
 
       <section className="py-8 px-4 max-w-6xl mx-auto text-center space-y-12">
@@ -21,29 +20,26 @@ export default function InvestorsPage() {
           <div className="bg-[var(--tw-brand-light)] rounded-xl p-5 shadow-sm">
             <h3 className="text-lg font-semibold mb-2">The Wedge: Operational Optimization</h3>
             <p className="text-neutral-700 text-sm leading-relaxed">
-              Our entry point is vertical operational use cases — where optimization meets complexity.
-              From pricing and routing to inventory and workforce planning, enterprises still rely on brittle spreadsheets and static solvers.
-              We’re embedding agentic orchestration into these decision layers — not to replace people, but to give them real leverage.
+              Our entry point is fleet dispatch — where decisions are frequent, time-sensitive, and measurable. It's the perfect proving ground for explainable agentic orchestration.
+              Once deployed in this wedge, our plug-in architecture and MCP protocol allow rapid expansion into finance, inventory, and workforce use cases — all built on the same decision infrastructure.
             </p>
           </div>
-
+          <div className="bg-[var(--tw-brand-light)] rounded-xl p-5 shadow-sm">
+            <h3 className="text-lg font-semibold mb-2">The Founding Team</h3>
+            <p className="text-neutral-700 text-sm leading-relaxed">
+              Founded by a former enterprise product leader, a PhD optimization expert, and an established product partner with a proven track record in enterprise products, we bring deep technical and domain expertise to a clear market wedge — and are already piloting with high-intensity enterprise use cases.We’re not a research lab or a consultancy. We’re builders — with a technical founding team, real deployments underway, and a plug-in system ready to scale.
+              Our architecture isn’t theoretical. It’s live, explainable, and extensible from day one.
+            </p>
+          </div>
           <div className="bg-[var(--tw-brand-light)] rounded-xl p-5 shadow-sm">
             <h3 className="text-lg font-semibold mb-2">The Strategic Moment</h3>
             <p className="text-neutral-700 text-sm leading-relaxed">
-              Enterprises are AI-curious, but skeptical of black boxes. LLMs are powerful, but raw. Optimization is proven, but inflexible.
-              We believe the future lies in combining optimization models with agentic protocols — governed, traceable, composable decision flows that plug into real ops.
-              This is a unique convergence moment, and DcisionAI is purpose-built to meet it.
+              Enterprises are deploying AI in isolated pockets — but lack a system for governed, adaptive decision-making at scale.
+              LLMs are impressive, but brittle. Optimization works, but needs context. Agentic infrastructure bridges that gap — and DcisionAI is positioned to lead the shift.
             </p>
           </div>
-
-          <div className="bg-[var(--tw-brand-light)] rounded-xl p-5 shadow-sm">
-            <h3 className="text-lg font-semibold mb-2">The Execution Advantage</h3>
-            <p className="text-neutral-700 text-sm leading-relaxed">
-              We’ve assembled a founding team that understands both the math and the machinery of enterprise software.
-              With optimization PhDs, product leaders, and a strategic engineering partner embedded from day one, we’re shipping fast and building for real-world constraints.
-              We’re not just theorizing the architecture — we’re deploying it with customers.
-            </p>
-          </div>
+          
+          
         </div>
       </section>
 
