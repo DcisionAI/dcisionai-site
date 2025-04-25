@@ -29,11 +29,11 @@ export default function Hero() {
             From optimizing routes to scheduling field teams, DcisionAI plugs into your systems to deliver decisions that adapt
         </p>
 
-        {/* Optional supporting tagline */}
+        {/* Optional supporting tagline 
         <p className="text-sm md:text-base mb-6 text-zinc-300 italic">
           Make every decision count — from the ground to the cloud.
         </p>
-
+        */}
         {/* CTA Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-10">
           <a
