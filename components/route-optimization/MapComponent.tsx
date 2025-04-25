@@ -86,7 +86,7 @@ export default function MapComponent({ requests, vehicles, solution }: MapCompon
   }
 
   return (
-    <div className="w-full h-[500px] rounded-lg overflow-hidden ">
+    <div className="w-full h-[500px] rounded-lg overflow-hidden bg-transparent">
       <MapContainer
         center={[center.lat, center.lng]}
         zoom={13}

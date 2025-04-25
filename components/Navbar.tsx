@@ -17,7 +17,6 @@ export default function Navbar({ onThemeChange }: Props) {
           <li><a href="/vision" className="hover:text-[var(--tw-brand-accent)]/80">Vision</a></li>
           <li><a href="/use-cases" className="hover:text-[var(--tw-brand-accent)]/80">Use Cases</a></li>
           <li><a href="/howitworks" className="hover:text-[var(--tw-brand-accent)]/80">How it works</a></li>
-          <li><a href="/route-optimization" className="hover:text-[var(--tw-brand-accent)]/80">Demo</a></li>
           <li><a href="/investors" className="hover:text-[var(--tw-brand-accent)]/80">Investors</a></li>
           <li><a href="/faq" className="hover:text-[var(--tw-brand-accent)]/80">FAQ</a></li>
         </ul>

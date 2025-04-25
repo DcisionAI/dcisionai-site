@@ -43,14 +43,16 @@ export default function Hero() {
             Explore Use Cases
           </a>
           <a
-            href="/architecture#Architecture"
+            href="https://platform.dcisionai.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="text-white border border-white px-6 py-3 rounded-full font-medium hover:bg-white hover:text-black transition"
           >
             See How It Works
           </a>
         </div>
 
-       {/* Microtrust */}
+       {/* Microtrust 
         <div className="text-sm font-medium flex flex-wrap justify-center gap-3 mb-12">
           {[
             "Enterprise-ready integration",
@@ -66,7 +68,7 @@ export default function Hero() {
             </span>
           ))}
         </div>
-
+        */}
         {/* Value Props */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl w-full text-white mb-20 text-center">
           {[
