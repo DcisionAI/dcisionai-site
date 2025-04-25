@@ -25,7 +25,7 @@ export default function Hero() {
         </h1> 
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl mb-6 max-w-2xl text-zinc-200 drop-shadow-md">
+        <p className="text-lg md:text-xl mb-20 max-w-2xl text-zinc-200 drop-shadow-md">
             From optimizing routes to scheduling field teams, DcisionAI plugs into your systems to deliver decisions that adapt
         </p>
 
@@ -35,7 +35,7 @@ export default function Hero() {
         </p>
         */}
         {/* CTA Buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
+        <div className="flex flex-wrap justify-center gap-4 mb-24">
           <a
             href="/use-cases"
             className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition"
