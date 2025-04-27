@@ -25,10 +25,12 @@ export default function Hero() {
         </h1> 
 
         {/* Subheadline */}
-        <p className="text-lg md:text-xl mb-20 max-w-2xl text-zinc-200 drop-shadow-md">
-            From optimizing routes to scheduling field teams, DcisionAI plugs into your systems to deliver decisions that adapt
+        <p className="text-lg md:text-xl mb-2 max-w-2xl text-zinc-200 drop-shadow-md">
+        Smarter Fleet and Workforce Automation.
         </p>
-
+        <p className="text-lg md:text-xl mb-20 text-zinc-200 drop-shadow-md">
+        <i>Agentic AI for real-world speed, flexibility, and control.</i>
+        </p>
         {/* Optional supporting tagline 
         <p className="text-sm md:text-base mb-6 text-zinc-300 italic">
           Make every decision count — from the ground to the cloud.
