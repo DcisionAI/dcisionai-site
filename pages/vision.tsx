@@ -22,7 +22,7 @@ export default function VisionPage() {
   }, []);
 
   return (
-    <section className="min-h-screen w-full px-6 py-10 space-y-20">
+    <section className="min-h-screen w-full px-6 py-10 space-y-8">
       {/* Hero */}
       <div className="text-center fade-section opacity-0 transition-all duration-1000">
         <h1 className="text-5xl font-sans font-semibold text-[var(--tw-brand-accent)]">
@@ -39,7 +39,7 @@ export default function VisionPage() {
           <h3 className="text-xl font-semibold text-[var(--tw-brand-accent)]">The Problem</h3>
           <p className="mt-2 text-[var(--tw-brand-muted)] text-sm">
             Enterprises are drowning in complexity — fragmented tools, opaque logic, outdated forecasts, brittle rules.
-            Decision-making today is reactive and disconnected. It’s often reduced to dashboards and gut calls.
+            Decision-making today is reactive and disconnected. It's often reduced to dashboards and gut calls.
           </p>
         </div>
 
@@ -61,7 +61,7 @@ export default function VisionPage() {
       </div>
 
       {/* Journey Map Section */}
-      <div className="fade-section opacity-0 transition-all duration-1000">
+      <div className="fade-section opacity-0 transition-all duration-1000 mt-8">
         <h2 className="text-3xl font-semibold text-center text-[var(--tw-brand-accent)] mb-4">
           From Dashboards to Decisions
         </h2>
@@ -69,8 +69,12 @@ export default function VisionPage() {
           Enterprise operations have evolved — from spreadsheets and dashboards to dynamic, data-driven workflows.
           This shift demands more than visibility. It requires an intelligent, adaptable decision layer.
         </p>
-        <p className="text-center text-[var(--tw-brand-muted)] italic">
-          Today, it's dispatch, routing, and scheduling. Tomorrow, it's every decision that moves your business.
+        <h2 className="text-3xl font-semibold text-center text-[var(--tw-brand-accent)] mb-4">
+        Transparent. Adaptable. Human-centered.
+        </h2>
+        <p className="text-center max-w-3xl mx-auto text-md text-[var(--tw-brand-muted)] mb-6">
+        Today, we transform dispatch, routing, and workforce planning. Tomorrow, we power every decision that moves your enterprise forward.
+        DcisionAI is building the agentic decision layer for the modern enterprise.
         </p>
       </div>
 
